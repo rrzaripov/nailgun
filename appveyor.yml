@@ -22,3 +22,6 @@ build_script:
 
 test_script:
   - "python -m pynailgun.test_ng"
+
+artifacts:
+  - path: nailgun\nailgun-server\target\nailgun-server-0.9.3-SNAPSHOT.jar
