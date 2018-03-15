@@ -1,6 +1,6 @@
 os: Visual Studio 2015
 
-version: '{project.version}'
+version: '${project.version}'
 
 environment:
   matrix:
