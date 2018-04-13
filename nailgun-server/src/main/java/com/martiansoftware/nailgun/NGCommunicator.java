@@ -329,6 +329,11 @@ public class NGCommunicator implements Closeable {
             byte chunkType = in.readByte();
 
             switch (chunkType) {
+                case NGConstants.CHUNKTYPE_CLIENT_DISCONNECT:
+                    LOG.log(Level.FINEST, "Got client disconnect chunk, len {0}", chunkLen);
+                    shutdown = true;
+                    break;
+
                 case NGConstants.CHUNKTYPE_STDIN:
                     LOG.log(Level.FINEST, "Got stdin chunk, len {0}", chunkLen);
                     InputStream chunkStream = readPayload(in, chunkLen);

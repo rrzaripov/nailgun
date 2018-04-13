@@ -89,6 +89,11 @@ public class NGConstants {
     public static final byte CHUNKTYPE_HEARTBEAT = 'H';
 
     /**
+     * Force shutdown nail
+     */
+    public static final byte CHUNKTYPE_CLIENT_DISCONNECT = 'Z';
+
+    /**
      * Server version number
      */
     public static final String VERSION;
